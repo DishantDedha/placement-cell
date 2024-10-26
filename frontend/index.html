@@ -1,0 +1,95 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Career Camp Dashboard</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <div id="app">
+        <!-- Sign Up / Sign In -->
+        <div id="auth">
+            <h2>Sign Up</h2>
+            <form id="signupForm">
+                <input type="email" id="signupEmail" placeholder="Email" required>
+                <input type="password" id="signupPassword" placeholder="Password" required>
+                <button type="submit">Sign Up</button>
+            </form>
+            <h2>Sign In</h2>
+            <form id="signinForm">
+                <input type="email" id="signinEmail" placeholder="Email" required>
+                <input type="password" id="signinPassword" placeholder="Password" required>
+                <button type="submit">Sign In</button>
+            </form>
+        </div>
+        <!-- Student Management -->
+        <div id="studentManagement">
+            <h2>Student List</h2>
+            <button id="loadStudents">Load Students</button>
+            <ul id="studentList"></ul>
+            <h2>Add Student</h2>
+            <form id="addStudentForm">
+                <input type="text" id="studentName" placeholder="Name" required>
+                <input type="text" id="studentCollege" placeholder="College" required>
+                <select id="studentStatus">
+                    <option value="placed">Placed</option>
+                    <option value="not_placed">Not Placed</option>
+                </select>
+                <input type="number" id="dsaScore" placeholder="DSA Final Score" required>
+                <input type="number" id="webdScore" placeholder="WebD Final Score" required>
+                <input type="number" id="reactScore" placeholder="React Final Score" required>
+                <button type="submit">Add Student</button>
+            </form>
+        </div>
+        <!-- Interview Management -->
+        <div id="interviewManagement">
+            <h2>Interview List</h2>
+            <button id="loadInterviews">Load Interviews</button>
+            <ul id="interviewList"></ul>
+            <h2>Create Interview</h2>
+            <form id="createInterviewForm">
+                <input type="text" id="companyName" placeholder="Company Name" required>
+                <input type="date" id="interviewDate" required>
+                <button type="submit">Create Interview</button>
+            </form>
+        </div>
+        <!-- Allocation and Result -->
+        <div id="allocation">
+            <h2>Allocate Student to Interview</h2>
+            <form id="allocateStudentForm">
+                <input type="text" id="allocateInterviewId" placeholder="Interview ID" required>
+                <input type="text" id="allocateStudentId" placeholder="Student ID" required>
+                <button type="submit">Allocate</button>
+            </form>
+            <h2>Mark Result</h2>
+            <form id="markResultForm">
+                <input type="text" id="resultInterviewId" placeholder="Interview ID" required>
+                <input type="text" id="resultStudentId" placeholder="Student ID" required>
+                <select id="resultStatus">
+                    <option value="PASS">PASS</option>
+                    <option value="FAIL">FAIL</option>
+                    <option value="On Hold">On Hold</option>
+                    <option value="Didn’t Attempt">Didn’t Attempt</option>
+                </select>
+                <button type="submit">Mark Result</button>
+            </form>
+        </div>
+        <!-- External Jobs List -->
+        <div id="externalJobs">
+            <h2>External Jobs List</h2>
+            <button id="loadJobs">Load Jobs</button>
+            <ul id="jobList"></ul>
+        </div>
+
+        <!-- CSV Download -->
+        <div id="csvDownload">
+            <h2>Download CSV</h2>
+            <button id="downloadCsv">Download CSV</button>
+        </div>
+    </div>
+
+    <script src="script.js"></script>
+</body>
+</html>
+    
